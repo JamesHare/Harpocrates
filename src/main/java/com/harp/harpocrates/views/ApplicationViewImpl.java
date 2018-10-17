@@ -31,16 +31,21 @@ public class ApplicationViewImpl implements ApplicationView {
 	}
 
 	/**
-	 * Constructor for the parent view that sets the size of the shell, creates the
-	 * widgets inside the shell and centers the shell.
+	 * Constructor for the parent view that sets the size of the shell, creates
+	 * the widgets inside the shell and centers the shell.
 	 * 
-	 * @param shell        - The parent {@link Shell}.
-	 * @param display      - The current {@link Display}.
-	 * @param inputFactory = The factory for creating the {@link Input}. Cannot be
-	 *                     {@link Null}.
+	 * @param shell
+	 *            - The parent {@link Shell}.
+	 * @param display
+	 *            - The current {@link Display}.
+	 * @param inputFactory
+	 *            = The factory for creating the {@link Input}. Cannot be
+	 *            {@link Null}.
 	 */
-	public ApplicationViewImpl(final Shell shell, Display display, InputFactory inputFactory) {
-		Preconditions.checkArgument(shell != null, ApplicationViewConstants.APPLICATION_VIEW_SHELL_NULL_ERROR_MESSAGE);
+	public ApplicationViewImpl(final Shell shell, Display display,
+			InputFactory inputFactory) {
+		Preconditions.checkArgument(shell != null,
+				ApplicationViewConstants.APPLICATION_VIEW_SHELL_NULL_ERROR_MESSAGE);
 		Preconditions.checkArgument(display != null,
 				ApplicationViewConstants.APPLICATION_VIEW_DISPLAY_NULL_ERROR_MESSAGE);
 		ApplicationViewImpl.shell = shell;
@@ -50,7 +55,8 @@ public class ApplicationViewImpl implements ApplicationView {
 		/**
 		 * The shell will be 3 columns wide.
 		 */
-		GridLayout ApplicationViewLayout = new GridLayout(ApplicationViewConstants.APPLICATION_VIEW_NUMBER_OF_COLUMNS,
+		GridLayout ApplicationViewLayout = new GridLayout(
+				ApplicationViewConstants.APPLICATION_VIEW_NUMBER_OF_COLUMNS,
 				true);
 		shell.setLayout(ApplicationViewLayout);
 		shell.setMinimumSize(shell.getSize());
@@ -62,13 +68,15 @@ public class ApplicationViewImpl implements ApplicationView {
 	 * {@inheritDoc}
 	 */
 	public void createWidgets(Shell shell, Display display) {
-		Preconditions.checkArgument(shell != null, ApplicationViewConstants.CREATE_WIDGETS_SHELL_NULL_ERROR_MESSAGE);
+		Preconditions.checkArgument(shell != null,
+				ApplicationViewConstants.CREATE_WIDGETS_SHELL_NULL_ERROR_MESSAGE);
 		Preconditions.checkArgument(display != null,
 				ApplicationViewConstants.CREATE_WIDGETS_DISPLAY_NULL_ERROR_MESSAGE);
 		/**
-		 * Widgets will be added to this method as they are developed. Each one will be
-		 * given a number of columns, used for sizing its child shells, and a boolean
-		 * with true indicating that each column has an equal width.
+		 * Widgets will be added to this method as they are developed. Each one
+		 * will be given a number of columns, used for sizing its child shells,
+		 * and a boolean with true indicating that each column has an equal
+		 * width.
 		 */
 		Composite inputComposite = new Composite(shell, SWT.NONE);
 		inputComposite.setLayout(new GridLayout(1, false));
@@ -79,51 +87,15 @@ public class ApplicationViewImpl implements ApplicationView {
 	 * {@inheritDoc}
 	 */
 	public void centerShell(Shell shell) {
-		Preconditions.checkArgument(shell != null, ApplicationViewConstants.CENTER_SHELL_SHELL_NULL_ERROR_MESSAGE);
-		Rectangle boundsOfDisplay = shell.getDisplay().getPrimaryMonitor().getBounds();
+		Preconditions.checkArgument(shell != null,
+				ApplicationViewConstants.CENTER_SHELL_SHELL_NULL_ERROR_MESSAGE);
+		Rectangle boundsOfDisplay = shell.getDisplay().getPrimaryMonitor()
+				.getBounds();
 		Point sizeOfShell = shell.getSize();
 		int leftShellBound = (boundsOfDisplay.width - sizeOfShell.x) / 2;
 		int topShellBound = (boundsOfDisplay.height - sizeOfShell.y) / 2;
-		shell.setBounds(leftShellBound, topShellBound, sizeOfShell.x, sizeOfShell.y);
+		shell.setBounds(leftShellBound, topShellBound, sizeOfShell.x,
+				sizeOfShell.y);
 	}
 
 }
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

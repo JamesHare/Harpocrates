@@ -13,15 +13,18 @@ public interface ApplicationView {
 	/**
 	 * Creates the widgets that make up the {@link ApplicationView}.
 	 * 
-	 * @param shell   - The parent {@link Shell}. Cannot be {@link Null}.
-	 * @param display - The current {@link Display}. Cannot be {@link Null}.
+	 * @param shell
+	 *            - The parent {@link Shell}. Cannot be {@link Null}.
+	 * @param display
+	 *            - The current {@link Display}. Cannot be {@link Null}.
 	 */
 	void createWidgets(final Shell shell, final Display display);
 
 	/**
 	 * Centers a given {@link Shell}.
 	 * 
-	 * @param shell - The {@link Shell} to be centered. Cannot be {@link Null}.
+	 * @param shell
+	 *            - The {@link Shell} to be centered. Cannot be {@link Null}.
 	 */
 	void centerShell(final Shell shell);
 }
