@@ -1,7 +1,5 @@
 package com.harp.harpocrates.views.internal.swt.input;
 
-
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 /**
  * 
@@ -15,6 +13,5 @@ public interface Input {
 	 */
 	Text getMessageBox();
 	Text getPasswordBox();
-	
 
 }
